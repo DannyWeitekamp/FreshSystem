@@ -1,0 +1,72 @@
+[
+//Toggle Comments
+	{ "keys": ["ctrl+q"], "command": "toggle_comment", "args": { "block": false } },
+	{ "keys": ["ctrl+shift+q"], "command": "toggle_comment", "args": { "block": true } },	
+
+//Switch Find Under Command and Duplicate
+	{ "keys": ["ctrl+shift+d"], "command": "find_under_expand" },
+	{ "keys": ["ctrl+d"], "command": "duplicate_line" },
+
+//Move to eol, bol
+	{ "keys": ["super+left"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+	{ "keys": ["super+right"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+	{ "keys": ["super+shift+left"], "command": "move_to", "args": {"to": "bol", "extend": true} },
+	{ "keys": ["super+shift+right"], "command": "move_to", "args": {"to": "eol", "extend": true} },
+
+//select line
+	{ "keys": ["ctrl+shift+a"], "command": "expand_selection", "args": {"to": "line"} },
+
+//Swap lines
+	{ "keys": ["ctrl+alt+up"], "command": "swap_line_up" },
+	{ "keys": ["ctrl+alt+down"], "command": "swap_line_down" },
+
+	{ "keys": ["alt+shift+up"], "command": "def_up", "args": {"extend": true} } ,
+	{ "keys": ["alt+shift+down"], "command": "def_up", "args": {"extend": true} },
+
+//Fast Ctrl Up/Down
+	{
+	  "keys": ["ctrl+up"], 
+	  "command": "chain", 
+	  "args": {
+	    "commands": [
+	      ["move", {"by": "lines", "forward": false}],
+	      ["move", {"by": "lines", "forward": false}]
+	    ]
+	  }
+	},
+
+	{
+	  "keys": ["ctrl+down"], 
+	  "command": "chain", 
+	  "args": {
+	    "commands": [
+	      ["move", {"by": "lines", "forward": true}],
+	      ["move", {"by": "lines", "forward": true}]
+	    ]
+	  }
+	},
+
+	{
+	  "keys": ["ctrl+shift+up"], 
+	  "command": "chain", 
+	  "args": {
+	    "commands": [
+	      ["move", {"by": "lines", "forward": false, "extend" : true}],
+	      ["move", {"by": "lines", "forward": false, "extend" : true}]
+	    ]
+	  }
+	},
+
+	{
+	  "keys": ["ctrl+shift+down"], 
+	  "command": "chain", 
+	  "args": {
+	    "commands": [
+	      ["move", {"by": "lines", "forward": true, "extend" : true}],
+	      ["move", {"by": "lines", "forward": true, "extend" : true}]
+	    ]
+	  }
+	},
+
+	
+]
